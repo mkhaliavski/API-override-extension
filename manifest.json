@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "api-override",
+  "description": "Adds possibility for easy overriding backend responses",
+  "version": "1.0",
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "action": {
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
+  "devtools_page": "devtools.html"
+}

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="icon" href="icon.png">
+    <title>API Override - Dev</title>
+</head>
+<body style="background: gray; display: flex; height: 100%; column-gap: 50px; align-items: center;">
+    <div style="width: 700px; height: 600px" id="main"></div>
+    <div style="width: 200px; height: 600px" id="sidebar"></div>
+
+    <script type="module" src="../../src/extension/panels/main.tsx" ></script>
+    <script type="module" src="../../src/extension/panels/sidebar.tsx"></script>
+</body>
+</html>
