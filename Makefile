@@ -1,5 +1,7 @@
 extension: clean verify build copy
 
+dev: dev
+
 clean:
 	@echo "--------------[CLEAN]--------------"
 	rm -rf ./dist
@@ -20,3 +22,8 @@ copy:
 	mkdir ./dist/scripts
 	cp -R ./src/extension/scripts/* ./dist/scripts/
 	cp ./src/extension/devtools.html ./dist/devtools.html
+
+
+dev:
+	@echo "--------------[RUNNING]--------------"
+	cd ./src/dev; vite --config vite.config.ts
