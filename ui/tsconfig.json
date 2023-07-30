@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "baseUrl": "./src",
-    "target": "ES2020",
+    "baseUrl": "./",
+    "target": "ES6",
     "useDefineForClassFields": true,
     "lib": ["ESNext", "DOM", "DOM.Iterable", "ES6"],
     "module": "ESNext",
@@ -25,5 +25,5 @@
     "noImplicitThis": true,
     "strictNullChecks": true
   },
-  "include": ["src"]
+  "include": ["./"]
 }

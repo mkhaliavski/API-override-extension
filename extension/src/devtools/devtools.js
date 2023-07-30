@@ -1,0 +1,1 @@
+chrome.devtools.panels.create("API Override", undefined, "devtools.panel.main.html")

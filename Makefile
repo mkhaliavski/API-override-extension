@@ -1,6 +1,6 @@
 extension: clean verify build copy
 
-dev: dev
+dev: running
 
 clean:
 	@echo "--------------[CLEAN]--------------"
@@ -9,21 +9,24 @@ clean:
 
 verify:
 	@echo "--------------[VERIFY]--------------"
-	tsc
+	cd ./ui; tsc
 
 build:
 	@echo "--------------[BUILD]--------------"
-	vite --config vite.config.build.ts build
+	cd ./ui; vite --config vite.config.ts build
 
-copy:
-	@echo "--------------[COPY]--------------"
-	cp manifest.json ./dist/manifest.json
-	cp icon.png ./dist/icon.png
-	mkdir ./dist/scripts
-	cp -R ./src/extension/scripts/* ./dist/scripts/
-	cp ./src/extension/devtools.html ./dist/devtools.html
+copy-build:
+	@echo "--------------[COPY BUILD]--------------"
+	mv ./ui/dist/* ./dist/
+	rm -rf ./ui/dist
+
+copy-files:
+	@echo "--------------[COPY-EXTENSION-FILES]--------------"
+	find ./extension -type f | xargs -I % cp % ./dist/
+
+copy: copy-build copy-files
 
 
-dev:
+running:
 	@echo "--------------[RUNNING]--------------"
-	cd ./src/dev; vite --config vite.config.ts
+	cd ./ui; vite --config vite.config.ts

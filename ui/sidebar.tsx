@@ -2,7 +2,9 @@ import ReactDOM from "react-dom/client";
 import React from "react";
 import Sidebar from "components/pages/Sidebar.tsx";
 
-ReactDOM.createRoot(document.getElementById('sidebar')!).render(
+const root = document.getElementById("sidebar") as HTMLElement;
+
+ReactDOM.createRoot(root).render(
     <React.StrictMode>
         <Sidebar />
     </React.StrictMode>,
