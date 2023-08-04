@@ -1,31 +1,31 @@
 {
-  "name": "src",
+  "name": "api-override-extension",
+  "version": "1.0.0",
+  "main": "index.tsx",
+  "repository": "https://github.com/mkhaliavski/API-override-extension.git",
+  "author": "Michael Khaliavski <mkhaliavski@gmail.com>",
+  "license": "MIT",
   "private": true,
-  "version": "0.0.0",
-  "type": "module",
   "scripts": {
-    "dev": "make dev",
-    "build": "make extension",
-    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "serve": "webpack --mode=development serve --open",
+    "watch": "webpack --mode=production --watch",
+    "build": "webpack --mode=production"
   },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@types/node": "^20.4.2",
-    "@types/react": "^18.2.14",
-    "@types/react-dom": "^18.2.6",
-    "@typescript-eslint/eslint-plugin": "^5.61.0",
-    "@typescript-eslint/parser": "^5.61.0",
-    "@vitejs/plugin-react": "^4.0.1",
-    "eslint": "^8.44.0",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.1",
-    "typescript": "^5.0.2",
-    "vite": "^4.4.0",
-    "vite-plugin-html-inject": "^1.0.1",
-    "vite-tsconfig-paths": "^4.2.0"
+    "@types/react": "^18.2.18",
+    "@types/react-dom": "^18.2.7",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^11.0.0",
+    "html-loader": "^4.2.0",
+    "html-webpack-plugin": "^5.5.3",
+    "ts-loader": "^9.4.4",
+    "typescript": "^5.1.6",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
   }
 }

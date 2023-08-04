@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "api-override",
   "description": "Adds possibility for easy overriding backend responses",
-  "version": "1.0",
+  "version": "1.0.0",
   "icons": {
     "16": "icon-enabled.png",
     "48": "icon-enabled.png",
