@@ -15,5 +15,8 @@
       "128": "icon-enabled.png"
     }
   },
+  "permissions": [
+    "debugger"
+  ],
   "devtools_page": "devtools.html"
 }
